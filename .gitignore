@@ -41,3 +41,6 @@ yarn-error.log*
 
 # nix
 .direnv
+
+# vscode
+.vscode
