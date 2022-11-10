@@ -1,14 +1,18 @@
 # Sharing Successes
 
+[Documentation](https://github.com/dashvine/sharing-successes-docs)
+
+## About T3 Stack
+
 This is an app bootstrapped according to the [init.tips](https://init.tips) stack, also known as the T3-Stack.
 
-## Why are there `.js` files in here?
+### Why are there `.js` files in here?
 
 As per [T3-Axiom #3](https://github.com/t3-oss/create-t3-app/tree/next#3-typesafety-isnt-optional), we take typesafety as a first class citizen. Unfortunately, not all frameworks and plugins support TypeScript which means some of the configuration files have to be `.js` files.
 
 We try to emphasize that these files are javascript for a reason, by explicitly declaring its type (`cjs` or `mjs`) depending on what's supported by the library it is used by. Also, all the `js` files in this project are still typechecked using a `@ts-check` comment at the top.
 
-## What's next? How do I make an app with this?
+### What's next? How do I make an app with this?
 
 We try to keep this project as simple as possible, so you can start with the most basic configuration and then move on to more advanced configuration.
 
@@ -26,9 +30,9 @@ Also checkout these awesome tutorials on `create-t3-app`.
 - [Build a full stack app with create-t3-app](https://www.nexxel.dev/blog/ct3a-guestbook)
 - [A first look at create-t3-app](https://dev.to/ajcwebdev/a-first-look-at-create-t3-app-1i8f)
 
-## How do I deploy this?
+### How do I deploy this?
 
-### Vercel
+#### Vercel
 
 We recommend deploying to [Vercel](https://vercel.com/?utm_source=t3-oss&utm_campaign=oss). It makes it super easy to deploy NextJs apps.
 
@@ -39,11 +43,11 @@ We recommend deploying to [Vercel](https://vercel.com/?utm_source=t3-oss&utm_cam
 - Click **Deploy**
 - Now whenever you push a change to your repository, Vercel will automatically redeploy your website!
 
-### Docker
+#### Docker
 
 You can also dockerize this stack and deploy a container. See the [Docker deployment page](https://create-t3-app-nu.vercel.app/en/deployment/docker) for details.
 
-## Useful resources
+### Useful resources
 
 Here are some resources that we commonly refer to:
 
