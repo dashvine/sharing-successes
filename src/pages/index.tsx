@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { prisma } from "../server/db/client";
 
-const Home: NextPage = () => {
+const Home: NextPage<{ example: any }> = ({ example }) => {
   return (
     <>
       <Head>
@@ -12,9 +13,19 @@ const Home: NextPage = () => {
 
       <main>
         <h1>T3</h1>
+        {JSON.stringify(example)}
       </main>
     </>
   );
 };
+
+export const getStaticProps = async () => {
+  const example = await prisma.example.findMany()
+  return {
+    props: {
+      example
+    }
+  }
+}
 
 export default Home;
