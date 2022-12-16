@@ -20,7 +20,7 @@
           node16Pkgs.yarn
           node16Pkgs.nodePackages.pnpm
           pkgs.nodePackages.mermaid-cli
-          # pkgs.sqlite
+          pkgs.sqlite
           
         ];
         shellHook = with pkgs; ''
