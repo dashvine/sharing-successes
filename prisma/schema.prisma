@@ -5,13 +5,41 @@ generator client {
   provider = "prisma-client-js"
 }
 
+generator erd {
+  provider = "prisma-erd-generator"
+}
+
 datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
-model Example {
-  id        String   @id @default(cuid())
+model Manager {
+  id        String       @id @default(cuid())
+  name      String
+  area      String
+  email     String
+  Indicated Indication[]
+}
+
+model Indication {
+  id                    String  @id @default(cuid())
+  status                String // can be pending, approved, reproved
+  indicatorName         String
+  indicatorArea         String
+  indicatorEmail        String
+  indicatorExperience   String
+  indicatorVideoUrl     String
+  indicatedName         String
+  indicatedArea         String
+  indicatedEmail        String
+  indicatedPrinciple    String
+  indicatedImageUrl     String?
+  indicatedManagerId    String
+  indicatedManagerEmail String?
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  indicatedManager Manager @relation(fields: [indicatedManagerId], references: [id])
 }
